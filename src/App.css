@@ -3,7 +3,7 @@
 *{
  margin:0;
  padding:0;
- 
+ overflow-x:hidden;
 }
 
 body{
@@ -11,127 +11,142 @@ body{
 }
 .main_page
 {
- border:1px solid black;
- width:1500px;
+ max-width:1500px;
  margin:0px auto;
  display:flex;
  flex-direction:row;
 }
 .navbar{
   width:25%;
-  border:1px solid red;
-  background: #FF5F6D;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to bottom, #FFC371, #FF5F6D);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to bottom, #FFC371, #FF5F6D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #FF8008;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FFC837, #FF8008);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FFC837, #FF8008); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-
-
+  z-index:1000;
+  
+}
+.second_element{
+  width:75%;
+  background-color:rgba(250, 245, 245, 0.707);
 }
 .dashboard{
-  width:75%;
-  border:1px solid green;
- background-color:#F2FEDC;
-
-
-}
-.profile_pic{
-  width:40%;
+  width:100%;
   
-  margin:15px auto;
-}
-.profile_pic img{
-width:90%;
-height:130px;
-filter:grayscale(0%);
-transition: all 800ms;
-box-shadow: 0 4px 8px rgb(51, 50, 50), 0 6px 20px rgb(51, 50, 50);
-border-radius:50%;
-cursor:pointer;
-}
-.profile_pic img:hover{
-  transform:rotate(360deg);
-  filter:grayscale(100%);
 }
 
-.myname{
-  font-size:30px;
- text-transform: uppercase;
- font-weight:bold;
- padding:0px 48px;
-  color: #ffffff;
-  background: linear-gradient(to right, rgb(136, 4, 48), white 10%,rgb(136, 4, 48) 20%);
-  background-position: 0;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shine 3s 5 linear;
-  animation-fill-mode:forwards;
-  -webkit-text-size-adjust:none;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-@keyframes shine
-{
-  0%
-    {background-position: 0}
-  60%
-    {background-position: 180px}
-  100%
-    {background-position: 300px}
-
-}
 .userdetails{ 
  text-align: center;
 }
-.icons{
+.social_icons{
   display:flex;
   flex-direction:row;
-  border:1px solid red;
   align-items:center;
-  justify-content:space-between;
+  justify-content:flex-end;
   width:38%;
-  margin:10px auto;
+  background-color:beige;
+  border-radius:10px;
   
+}
+.github,.linkedin,.gmail{
+  font-size:25px;
+}
+.linkedin{
+  color:rgb( 0, 119, 181);
+}
+.gmail{
+  color:red;
+}
+.social_links{
+ padding-top:5px;
+ margin-left:10px;
+}
+.social_links a:visited{
+  color:black;
 }
 
 .navigation_links{
-  border:1px solid red;
-  width:80%;
-  margin:40px auto;
+ 
+  width:20%;
+  margin:40px;
   text-align:center;
+  height:auto;
+  display:flex;
+  align-items:center;
+  flex-direction: column;
   
 }
+.toggle{
+  display:none;
 
-
+}
+ 
 .links {
   font-size:20px;
   padding: 15px 10px;
   cursor: pointer;
   font-weight: bold;
+ display:flex;
+ flex-direction:column;
+
 }
+.links a{
+  margin-bottom:20px;
+}
+ #hidden{
+  display:flex;
+  }
 .nav_icons{
-  margin-right:10px;
-  font-size:25px;
-  color:white;
+  font-size:30px;
   vertical-align:bottom;
-  margin-right:40px;
-  
-  
+  margin-right:20px;
+  margin-left:20px; 
 }
+
+
 .hero_section{
- background-image:url("../src/dashimage.png");
-border:1px solid red;
-height:668px;
-background-repeat: no-repeat;
-background-size:cover;
+ 
+
+height:auto;
+display:flex;
+flex-direction:row;
+background-color:beige;
 
 }
+.hero_heading{
+ 
+  width:40%;
+  display:flex;
+  flex-direction:column;
+ 
+}
+.surbhi{
+  margin:30% 10px 10px 20px;
+  font-size:50px;
+ 
+  color:rgb(174, 55, 4);
+}
+.designation{
+  
+  font-size:30px;
+  margin:0px 20px;
+  color:rgb(22, 2, 78);
+  font-weight:600;
+}
+.hero_image{
 
+  width:60%;
+  text-align: right;
+}
+.hero_image img{
+
+height:670px;
+width:100%;
+}
 
 .about_section{
-  
-  margin:50px 20px;
-  
+   margin:70px 20px;
+  box-shadow: 10px 10px 16px black;
+  border-radius:10px;
   }
   .details_section{
     
@@ -139,31 +154,27 @@ background-size:cover;
     flex-direction:row;
     align-items:center;
     justify-content:space-between;
-    margin-top:10px;
     background-color:rgb(170,150,199);
     border-radius:10px;
     padding:20px;
-    box-shadow: 10px 10px 16px black;
-  }
-  .profile_image{
-    width:30%; 
     
   }
+  
   .profile_image img{
-    border-radius:50px;
-    border:8px solid rgb(141,125,187);
     height:250px;
-    
+    border-radius: 50px;
+    border: 8px solid rgb(141,125,187);
   }
   .vertical_line{
-    height:350px;
+    height:380px;
     width:3px;
     background-color:rgba(204, 198, 198, 0.397);
   }
   .mydetails{
     width:60%;
-    
-  
+    display:flex;
+    flex-direction:column;
+ margin-left:20px; 
   }
   .mydetails p{
     font-size:20px;
@@ -180,10 +191,7 @@ background-size:cover;
     color:rgb(61,47,98);
   }
   .skills_section{
-    border:1px solid red;
-    margin:50px 0px;
-    height:250px;
-    
+    margin:70px 0px;
     padding:20px;
   }
   .skill_heading{
@@ -192,12 +200,13 @@ background-size:cover;
     letter-spacing:1px;
   }
   .skills_box{
-    border:1px solid black;
+    
     display:flex;
     align-items:center;
     justify-content:space-between;
-    margin-top:20px;
-  
+    flex-wrap:wrap;
+    margin:20px;
+    height:160px;
   }
   .circle{
     width:120px;
@@ -227,10 +236,11 @@ background-size:cover;
   width: 100%;
   height: 25px;
   background: rgba(0,0,0,0.6);
-  bottom: -30px;
+  bottom: 0px;
   z-index: 1;
   filter: blur(10px);
   border-radius:50%;
+  
 }
   
   .skill{
@@ -246,14 +256,15 @@ background-size:cover;
     line-height:1.5;
     text-align: justify;
     border-radius:10px;
-    margin-top:30px;
+    margin-bottom:30px;
     
   }
   .education_section{
-    border:1px solid black;
-    background-color:rgb(174,205,252);
+    
+    background-color:rgb(226,237,251);
     padding:30px 20px;
-    margin-top:30px;
+    margin-bottom:70px;
+    
   }
   .education{
     margin:10px 20px;
@@ -264,20 +275,19 @@ background-size:cover;
   
   }
   .education_details{
-    width:50%;
+    width:51%;
     background-color:rgb(147, 182, 250);
     padding:0px 15px;
-    height:600px;
   }
   .edu_heading{
     color:rgb(36,56,99);
   }
   .edu_image{
-    width:50%;
-    height:600px;
+    width:49%;
+    
   }
   .edu_image img{
-    height:600px;
+    height:630px;
     width:100%;
   }
   .degree{
@@ -299,26 +309,21 @@ background-size:cover;
     font-family:sans-serif;
   }
 .summary{
-  font-size:16px;
+  font-size:17px;
   font-family:serif;
   color:rgb(236,244,250);
-}
-.secondary{
-  margin-bottom:30px;
+  font-weight:500;
 }
 
 
 
-
-/* CSS */
 .buttons {
   appearance: none;
   width:80%;
-  background-color:rgb(61, 15, 15);
+  background-color:rgb(174, 55, 4);
   border-radius: 30px;
-  border:4px solid rgb(170, 66, 5);
-  box-shadow: rgb(170, 66, 5) 0 4px 4px, rgb(170, 66, 5) 0 4px 20px;
-  box-sizing: border-box;
+  border:4px solid rgb(96, 1, 1);
+  box-sizing:border-box;
   color:white;
   cursor: pointer;
   display: inline-block;
@@ -336,100 +341,24 @@ background-size:cover;
   -webkit-user-select: none;
   touch-action: manipulation;
   vertical-align:bottom;
-
+  font-family: 'Vollkorn', serif;
+ 
 }
 
 .buttons:hover {
-  background-color: rgb(170, 66, 5);
-  box-shadow: rgb(46, 42, 42) 0 6px 4px;
-  transform: scale(1.075);
-}
-
-.buttons:active {
-  transform: scale(1.025);
-}
-
-@media (min-width: 768px) {
-  .buttons {
-    font-size: 20px;
-    
-  }
-}
-
-.designation{
-  
-  font-style:italic;
-  letter-spacing:0.8px;
-  
-}
-
-.skills_image{
-  border:1px solid white;
-  height:400px;
-  width:60%;
-  margin:0 25%;
-  display:flex;
-  flex-direction:row;
-  justify-content: space-between;
-}
-.skills1,.skills2,.skills4,.skills5{
-  border:1px solid black;
-  background-color:white;
-  color:black;
-  width:10%;
-  padding:10px 15px;
-  height:25px;
-  text-align: center;
-  border-radius:5px;
+  background-color: rgb(96, 1, 1);
   color:white;
-  font-size:20px;
-  transition:all 0.5s;
-}
-.skills1{
-  align-self:center;
-  margin-left:100px;
-  background-color:rgb(77, 124, 228);
-  
-}
-.skills2{
-  margin-top:70px;
-  margin-right:80px;
-  background-color:red;
-  
-}
-.skills4{
-  margin-top:70px;
-  width:20%;
-  margin-left:70px;
-  background-color:green;
-  
-}
-.skills5{
-  
-  width:15%;
-  align-self:center;
-background-color:darkgoldenrod;
-  
-}
-.skills1:hover,.skills2:hover,.skills4:hover,.skills5:hover{
-  cursor:pointer;
-  animation: shake 2s ease infinite;
+  ;
 }
 
 
-@keyframes shake {
-	0%, 100% {transform: translateX(0);}
-	10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
-	20%, 40%, 60%, 80% {transform: translateX(10px);}
-}
 .portfolio_section{
-  border:1px solid green;
- 
+  
   padding:20px;
-  margin:40px 0px;
+  margin-bottom:20px;
 }
 .portfolio{
-  border:1px solid black;
+
   display:flex;
   flex-direction:row;
   align-items:center;
@@ -468,26 +397,44 @@ background-color:darkgoldenrod;
   width: 88%;
   transition: .5s ease;
   opacity:0;
-  color: rgb(195, 255, 0);
+  color: white;
+  font-weight:600;
   padding: 20px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
 .contact_section{
-  border:1px solid red;
-  height:750px;
-  background:url("../src/contact\ \(1\).png");
+  
+  height:auto;
   display:flex;
-  justify-content:center;
+  flex-direction:row;
+  justify-content:space-between;
+  width:auto;
+  padding:70px 50px;
+  background-color:rgb(226,215,247);
+}
+.contact_image{
+  width:55%;
+  
+  background-color:white;
+  margin:0px auto;
+}
+.contact_image img{
+  height:550px;
   width:100%;
+}
+.contact_details{
+  width:45%;
+  
+  background-color:rgb(141,125,187);
+  margin:0px auto;
 }
 .contact{
   display:flex;
   flex-direction:column;
-  width:25%;
-  margin-left:50%;
-  margin-top:15%;
-
+  width:80%;
+  
+  margin:30px auto;
 }
 .contact_heading{
   color:rgb(61,47,98);
@@ -498,9 +445,12 @@ background-color:darkgoldenrod;
 span {
   display: none;
   text-align: center;
-  margin-top:20px;
-  color:white;
+  margin-top:40px;
+  color:black;
   font-size:18px;
+  background-color:white;
+  padding:10px;
+  border-radius:10px;
 }
 
   .visible {
@@ -509,21 +459,940 @@ span {
 input,textarea,.send{
   height:30px;
   border-radius:15px;
-  padding:5px;
+  padding:10px;
   margin-bottom:20px;
   border:none;
   font-size:15px;
   color:rgb(50,37,83);
+  font-family: 'Vollkorn', serif;
+
 }
 textarea{
   height:100px;
 }
 .send{
-  height:40px;
+  height:45px;
   background-color:rgb(50,37,83);
   color:white;
   font-size:18px;
   border:none;
   cursor:pointer;
   letter-spacing:0.5px;
+  transition-duration: 0.4s;
+  outline:none;
+  border:none;
 }
+.send:hover{
+  background-color:rgb(73, 55, 119);
+}
+.send:active{
+  transform: translateY(4px);
+  }
+.download{
+  
+  padding:15px 20px;
+  font-size:18px;
+  font-weight:600;
+  margin:30px 0px 10px 0px;
+  text-align:center;
+  
+  background-color:rgb(61,47,98);
+  color:white;
+  cursor:pointer;
+  text-transform: uppercase;
+  font-family: 'Vollkorn', serif;
+  border:none;
+  box-shadow: 5px 10px 10px black;
+  border-radius:5px;
+  transition-duration: 0.4s;
+  outline: none;
+}
+.download:hover{
+  background-color:white;
+  color:rgb(61,47,98);
+  
+}
+.download:active{
+transform: translateY(4px);
+}
+.download_link{
+  text-decoration: none;
+  margin:0px auto;
+}
+.download_icon{
+  font-size:25px;
+vertical-align: middle;
+margin-right:5px;
+}
+
+.bars{
+font-size:25px;
+}
+
+/* Media Queries*/
+@media(max-width:750px)
+{
+  .toggle{
+    display:flex;
+  }
+   .links{
+    display:none;
+  }
+   #hidden{
+    position:absolute;
+    left:0;
+    top:77px;
+    height:auto;  
+    width:95%;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    background-color:#FF8008;
+    border-bottom-left-radius:20px;
+    border-bottom-right-radius:20px;
+    }
+    .buttons {
+      width:100%;
+    }
+    .nav_icons{
+      font-size:25px;
+      vertical-align:bottom;
+      margin-right:10px;
+      margin-left:10px; 
+    }
+    .main_page
+   {
+ 
+ display:flex;
+ flex-direction:column;
+  }
+.navbar{
+  width:100%;
+}
+.second_element{
+  width:100%;
+}
+
+}
+
+
+@media(min-width:375px)
+{
+  .dashboard{
+    margin:0px 0px;
+    width:auto;
+   }
+   
+    .about_section{
+    margin:50px 15px;  
+    }
+
+    .details_section{
+      display:flex;
+      flex-direction:column;
+      padding:20px;   
+    }
+
+    .profile_image{
+      width:100%; 
+      margin-top:10px;
+      margin-left:0px;
+      
+      text-align:center;
+    }
+    .profile_image img{
+      height:200px;    
+    }
+    .vertical_line{
+      display:none;
+    }
+    .mydetails{
+      width:100%;
+      display:flex;
+      flex-direction:column;
+     margin-top:10px;
+     margin-left:0px;
+    }
+    .mydetails p{
+      font-size:18px;
+      width:100%;
+      margin-top:10px;
+      
+    }
+    .about_heading{
+      font-size:40px;
+  
+    }
+    .download{
+      padding:15px 20px;
+      font-size:18px;
+      margin:30px 0px 10px 0px;
+
+    }
+   
+    
+    .download_icon{
+      font-size:25px;
+    vertical-align: middle;
+    margin-right:5px;
+    }
+    .skills_section{
+    
+      margin:50px 10px;
+      padding:10px;
+    }
+    .skill_heading{
+      font-size:40px;
+    }
+    .skills_box{
+      margin:10px 0px;
+      height:auto;
+    }
+    .circle{
+     margin-bottom:10px;
+    }
+    .education_section{
+      padding: 20px;
+      margin:0px 0px 50px 0px;  
+      
+    }
+    .education{
+      margin:10px;
+      display:flex;
+      flex-direction:column;
+      
+    
+    }
+    .education_details{
+      width:95%;
+      background-color:rgb(147, 182, 250);
+      padding:10px;
+    }
+    .edu_image{
+      width:100%;    
+    }
+    .edu_image img{
+      height:auto;
+    }
+    .degree{
+      font-size:22px;  
+    }
+    .college_name{
+      font-size:16px;
+    }
+  .summary{
+    font-size:15px;
+  }
+
+  .mca{
+    text-align:left;
+    margin-bottom:15px;
+    
+  }
+  .skill{
+   font-size:16px;
+  }
+  
+  .portfolio{
+    
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:10px;
+  }
+  .project{ 
+    width:90%;
+    margin-bottom:25px;
+  }
+  .project img{
+    height:300px;
+    width:100%;
+
+  }
+  .contact_section{
+    
+    display:flex;
+    flex-direction:column;
+  
+  }
+  .contact_image{
+    width:100%;
+  }
+  .contact_image img{
+    height:auto;
+    width:100%;
+  }
+  .contact_details{
+    width:100%;
+  
+  }
+  .contact{
+   height:auto;
+  }
+  .contact_heading{
+    
+    font-size:40px;
+    text-align:left;
+    margin-bottom:0px;
+  }
+  span {
+    padding:0px;
+    margin-top:5px;
+    
+  }
+     
+  input,textarea,.send{
+    height:10px;
+    margin-bottom:10px;
+  }
+  textarea{
+    height:50px;
+  }
+  .send{
+    height:45px;
+  }
+  
+   
+    
+    .navigation_links{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      flex-direction:row;
+      width:90%;
+      margin:20px 15px;
+    
+    }
+
+    .hero_section{
+      display:flex;
+      flex-direction:column;
+      
+      }
+      .hero_heading{
+        width:100%;
+       
+      }
+      .surbhi{
+        margin:5% 10px 10px 10px;
+        font-size:40px;
+      }
+      .designation{
+        
+        font-size:20px;
+        margin:0px 10px;
+       
+      }
+      .hero_image{
+        
+        width:100%;
+        text-align: right;
+      }
+      .hero_image img{
+      height:auto;
+      }
+      .circle{
+        height:130px;
+        width:130px;
+       }
+       .social_icons{
+        margin-top:0px;
+        width:35%;
+        justify-content:space-evenly;
+  
+      } 
+}
+@media(min-width:436px)
+{
+  .circle{
+    height:135px;
+    width:135px;
+   }
+   .social_icons{
+    margin-top:0px;
+    width:30%;
+    justify-content:space-evenly;
+
+  } 
+}
+@media(min-width:450px)
+{
+  .project{ 
+    width:85%;
+  }
+  .circle{
+    height:100px;
+    width:100px;
+   }
+   .skill{
+    font-size:16px;
+   }
+}
+@media(min-width:520px)
+{
+  .project{ 
+    width:75%;
+  }
+  .project img{
+    height:310px;
+  }
+  .circle{
+    height:110px;
+    width:110px;
+   }
+   .social_icons{
+    margin-top:0px;
+    width:25%;
+    justify-content:space-evenly;
+
+  } 
+}
+@media(min-width:596px)
+{
+  .circle{
+    height:120px;
+    width:120px;
+   }
+   .education_details{
+    width:85%;
+  }
+  .edu_image{
+    width:89%;    
+  }
+  .contact_image{
+    width:85%;
+  }
+  .contact_details{
+    width:85%;
+  }
+  
+}
+@media(min-width:620px){
+.skill{
+  font-size:18px;
+ }
+ 
+ .project{ 
+  width:65%;
+}
+.surbhi{
+  font-size:45px;
+}
+.designation{
+  
+  font-size:25px;
+ 
+}
+.about_heading{
+  font-size:45px;
+
+}
+.mydetails p{
+  font-size:20px;
+}
+.skill_heading{
+  font-size:45px;
+}
+.degree{
+  font-size:25px;  
+}
+.college_name{
+  font-size:20px;
+}
+.summary{
+  font-size:17px;
+}
+.education_details{ 
+  padding:15px;
+}
+.contact_heading{
+    
+  font-size:45px;
+
+}
+input,textarea,.send{
+  height:30px;
+  margin-bottom:20px;
+}
+textarea{
+  height:70px;
+}
+.send{
+  height:45px;
+}
+.edu_image img{
+  height:500px;
+}
+.social_icons{
+  margin-top:0px;
+  width:20%;
+  justify-content:space-evenly;
+
+} 
+}
+
+@media(min-width:645px){
+  .hero_section{
+    display:flex;
+    flex-direction:row;  
+    }
+    .hero_heading{
+      width:40%;
+    }
+    .hero_image{
+      width:60%;
+    }
+    .surbhi{
+      margin:15% 10px 10px 10px;
+      font-size:40px;
+    }
+    .designation{
+      font-size:22px;   
+    }
+    .about_section{
+      margin:70px 20px;
+    }
+    .skills_section{
+      margin:70px 0px;
+      padding:20px;
+    }
+    .skills_box{
+      margin:20px;
+    }
+    .education_section{
+    
+      padding:30px 20px;
+      margin-bottom:70px;
+    }
+    .education{
+      margin:10px 20px;
+    }
+   
+    .portfolio{
+      display:flex;
+      flex-direction:row;
+      align-items:center;
+      justify-content:space-between;
+      margin:20px auto;
+      padding:20px;
+      flex-wrap: wrap;
+    }
+    .project{ 
+      width:47%;
+      margin-bottom:40px;
+    }
+    .project img{
+      height:300px;
+    }
+    .details_section{
+    
+      display:flex;
+      flex-direction:row;
+      align-items:center;
+      justify-content:space-between; 
+  
+    }
+    .profile_image{
+      width:35%; 
+      margin-left:0px;
+      margin-top:0px;
+      text-align:none;
+    }
+    
+    .mydetails{
+      width:65%;
+      display:flex;
+      flex-direction:column;
+      margin-left:20px; 
+      margin-top:0px;
+    }
+    .profile_image img{
+      width:90%;
+      height:200px;
+    }
+    .mydetails p{
+      font-size:18px;
+    }
+    .edu_image img{
+      height:450px;
+    }
+}
+
+@media(min-width:686px){
+  .circle{
+     height:130px;
+     width:130px;
+    }
+    .edu_image img{
+      height:430px;
+    }
+    .contact_image img{
+      height:450px;
+    }
+    .education_details{
+      width:80%;
+    }
+    .edu_image{
+      width:84%;    
+    }
+    .contact_image{
+      width:80%;
+    }
+    .contact_details{
+      width:80%;
+    }
+}
+@media(min-width:736px){
+  .circle{
+     height:140px;
+     width:140px;
+    }
+    .contact_section{
+      display:flex;
+      flex-direction:row;
+      justify-content:space-between;
+    }
+    .contact_image{
+      width:50%;
+    }
+    
+    .contact_details{
+      width:50%;
+    }
+     
+    .social_icons{
+      margin-top:0px;
+      width:20%;
+      justify-content:space-evenly;
+
+    } 
+    .contact_heading{
+    
+      font-size:40px;
+      text-align:center;
+    }
+    .education_details{
+      width:75%;
+    }
+    .edu_image{
+      width:79%;    
+    }
+  }
+  @media(min-width:750px){
+    
+    .navbar{
+      width:20%;
+      
+    }
+    .navigation_links{
+      width:100%;
+      margin:30px 0px;
+      text-align:center;
+      height:auto;
+      display:flex;
+      align-items:center;
+      flex-direction: column;
+      
+    }
+    
+    .second_element{
+      width:80%;
+    }
+
+    .links {
+      font-size:20px;
+      padding:0px;
+      
+    }
+
+    .buttons {
+      width:100%;
+      padding:5px;
+    }
+    .nav_icons{
+      font-size:18px;
+      
+      margin-right:5px;
+      margin-left:5px; 
+    }
+    .social_icons{
+      margin-top:20px;
+      width:70%;
+      justify-content:space-evenly;
+
+    }
+    .social_links{
+      
+      margin-left:0px;
+     }
+     .circle{
+      height:120px;
+      width:120px;
+     }
+     
+    .project img{
+      height:280px;
+    }
+      
+    .contact_image img{
+      height:350px;
+    }
+    .contact_heading{
+    
+      font-size:35px;
+      text-align:center;
+      margin-bottom:5px;
+    }
+    input,textarea,.send{
+      height:10px;
+      margin-bottom:10px;
+    }
+    textarea{
+      height:70px;
+    }
+    .send{
+      height:45px;
+    }
+  }
+
+  @media(min-width:861px){
+
+    .circle{
+      height:130px;
+      width:130px;
+     }
+     
+  }
+  @media(min-width:924px){
+
+    .circle{
+      height:140px;
+      width:140px;
+     }
+     
+     .education_details{
+      width:80%;
+    }
+    .edu_image{
+      width:84%;    
+    }
+    .edu_image img{
+      height:480px;
+    }
+    .project img{
+      height:300px;
+    }
+  }
+
+  @media(min-width:986px){
+
+    .circle{
+      height:150px;
+      width:150px;
+     }
+     .mydetails p{
+      font-size:20px;
+      
+     }
+     .project img{
+      height:320px;
+    }
+    .contact_image{
+      width:55%;
+    }
+    
+    .contact_details{
+      width:45%;
+    }
+    }
+
+    @media(min-width:1049px){
+
+      .circle{
+        height:110px;
+        width:110px;
+       }
+       .skills_box{
+        flex-wrap:nowrap;
+       }
+       .skills_section{
+        padding:0px;
+      }
+      .skill{
+        font-size:14px;
+       }
+       .surbhi{
+        margin:35% 10px 10px 20px;
+        font-size:50px;
+       }
+       .designation{ 
+        font-size:30px;  
+        margin:0px 20px;
+       }
+       .profile_image{
+        width:30%; 
+        margin-left:20px;
+      }
+      .links {
+        font-size:20px;
+        padding: 15px 10px;
+        
+      }
+      .buttons{
+        padding:15px 10px;  
+      }
+      .nav_icons{
+        font-size:30px;
+        margin-right:10px;
+        margin-left:10px; 
+      }
+      .contact_heading{
+    
+        font-size:40px;
+        text-align:center;
+        margin-bottom:10px;
+      }
+      .contact_image img{
+        height:450px;
+      }
+      input,textarea,.send{
+        height:30px;
+        margin-bottom:20px;
+      }
+      textarea{
+        height:100px;
+      }
+      .send{
+        height:45px;
+      }
+      .edu_image{
+        width:80%;    
+      }
+      .education_details{
+        width:76%;
+      }
+      .edu_image img{
+        height:520px;
+      }
+    }
+
+    @media(min-width:1150px){
+
+      .education{
+        margin:10px 20px;
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content:space-between;
+      
+      }
+      .education_details{
+        width:51%;
+        background-color:rgb(147, 182, 250);
+        padding:10px 15px;
+      }
+      .edu_image{
+        width:49%;
+        
+      }
+      .edu_image img{
+        height:780px;
+        width:100%;
+      }
+      .buttons{
+        font-size:18px;
+        
+      }
+      .profile_image{
+        width:30%; 
+        margin-left:20px;
+      }
+      .profile_image img{
+        border-radius:50px;
+        border:8px solid rgb(141,125,187);
+        height:250px;
+        
+      }
+      .about_heading{
+        font-size:50px;
+      }
+      .mydetails{
+        width:60%;
+       
+      }
+      .vertical_line{
+        display:flex;
+      }
+      .project{ 
+        width:32%
+      }
+      .skills_section{
+        padding:20px;
+      }
+      .degree{
+        font-size:25px;
+      }
+      #year{
+        font-size:18px;
+      }
+      .college_name{
+        font-size:20px;
+      }
+    .summary{
+      font-size:17px;
+    }
+    .mca{
+      margin-bottom:30px;
+      
+    }
+    .contact_heading{
+      text-align:center;
+      margin-bottom:15px;
+      font-size:50px;
+    }
+    }
+
+
+    @media(min-width:1296px){
+
+      .circle{
+        width:120px;
+        height:120px;
+      }
+      .skill{
+        
+       font-size:18px;
+      }
+      .mca{
+    
+        text-align: justify;
+        margin-bottom:30px;
+        
+      }
+      .edu_image img{
+        height:750px;
+      }
+      .contact_image img{
+        height:550px;
+        width:100%;
+      }
+      .education_details{
+
+         height:730px;
+
+      }
+      .profile_image img{
+       
+        height:280px;
+      }
+      .social_icons{
+        width:55%;
+      
+      }
+    }
+  /*.mca{
+    
+      text-align: justify;
+      margin-bottom:30px;
+      
+    }*/

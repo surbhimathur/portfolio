@@ -46,7 +46,8 @@ export function Portfolio()
     name:"Dezy" ,
     image:dezy,
     link:"https://surbhimathur.github.io/dezyit.github.io/"
-}
+},
+
 ];
     return(
         <div className="portfolio_section" id="portfolio">
@@ -64,7 +65,8 @@ function Projectdetail({name,image,link})
  
 
     return(
-        <div className="project">
+        <div className="project" data-aos="flip-left" 
+        data-aos-duration="1000" data-aos-easing="ease-in">
        
            <a href={link} target="_blank"><img src={image} /></a>
             <p className="project_name">{name}</p>

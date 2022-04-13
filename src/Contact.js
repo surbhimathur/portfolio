@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+import contact from "../src/contact.png";
 import emailjs from 'emailjs-com';
 
 export function Contact()
@@ -40,14 +41,22 @@ export function Contact()
 
     return(
         <div className="contact_section" id="contact">
+<div className="contact_image" data-aos="zoom-in-right" 
+    data-aos-duration="1000">
+    <img src={contact} />
+</div>
 
-<div className="contact">
-<h3 className="contact_heading">Contact Me</h3>
+<div className="contact_details" data-aos="zoom-in-left" 
+    data-aos-duration="1000" >
+    <div className="contact">
+    <h3 className="contact_heading">Contact Me</h3>
         <input type="text" placeholder="Name" value={name} onChange={e => setName(e.target.value)}/>
         <input type="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} />
         <textarea placeholder="Message"  value={message} onChange={e => setMessage(e.target.value)}></textarea>
         <button className="send" onClick={submit}>Send Message</button>
         <span className={emailSent ? 'visible' : null}>Thank you for your message, I will be in touch in no time!</span>
+    </div>
+
 </div>
 
 </div>

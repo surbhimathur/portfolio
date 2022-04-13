@@ -1,13 +1,16 @@
 import "./App.css";
 
-import React, { useEffect } from "react";
+import { MdPsychology, MdSchool } from "react-icons/md";
+import React, { useEffect, useState } from "react";
 
 import { AiOutlineFileText } from "react-icons/ai"
 import { AiOutlineHome } from "react-icons/ai";
 import { BsLinkedin } from "react-icons/bs";
 import { BsPersonCircle } from "react-icons/bs";
+import {FaBars} from "react-icons/fa";
 import { GiFiles } from "react-icons/gi";
 import { MdOutlineContactMail } from "react-icons/md";
+import {SiGmail} from "react-icons/si";
 import { VscGithub } from "react-icons/vsc";
 
 export function Navbar() {
@@ -17,24 +20,15 @@ export function Navbar() {
     let element = document.getElementById(target);
     element && element.scrollIntoView({ behavior: "smooth", block: "start" });
   }, []);
+
+  const[showLinks,setShowLinks] =useState(false);
+  
   return (
     <div className="navbar">
-      <div className="profile_pic">
-        <img src="https://media-exp1.licdn.com/dms/image/C4E03AQH8dvJfpsriRw/profile-displayphoto-shrink_200_200/0/1615782802188?e=1652313600&v=beta&t=UdgMBOdj-6yzJRqOTcIdY1JppCU6bJlnCvEkUu19RT0" />
-      </div>
 
-      <div className="userdetails">
-        <h2 className="myname">Surbhi Mathur</h2>
-        <h3 className="designation">Front End Developer</h3>
-        
-      {/*<div className="icons">
-         <VscGithub className="github" /> <BsLinkedin className="linkedin" />
-        </div>*/}
-      </div>
-
-      <div className="navigation_links"> 
+      <div className="navigation_links" > 
       
-       <div className="links"> 
+       <div className="links" id={showLinks ? "hidden" : ""}> 
        <a
         href="/"
         onClick={e => {
@@ -46,9 +40,9 @@ export function Navbar() {
         >
          <button className="buttons"><AiOutlineHome className="nav_icons"/>Home</button>
        </a>
-          </div>
           
-          <div className="links">
+          
+          
           <a
         href="/"
         onClick={e => {
@@ -60,9 +54,9 @@ export function Navbar() {
         >
          <button className="buttons"><BsPersonCircle className="nav_icons"/>About</button>
             </a> 
-           </div>
+           
 
-           <div className="links">
+           
            <a
         href="/"
         onClick={e => {
@@ -72,11 +66,11 @@ export function Navbar() {
           window.history.pushState("skills", "skills", "/skills");
         }}
         >
-            <button className="buttons"><BsPersonCircle className="nav_icons"/>Skills</button>
+            <button className="buttons"><MdPsychology className="nav_icons"/>Skills</button>
             </a>
-           </div>
            
-           <div className="links">
+           
+           
            <a
         href="/"
         onClick={e => {
@@ -86,11 +80,11 @@ export function Navbar() {
           window.history.pushState("education", "education", "/education");
         }}
         >
-           <button className="buttons"><AiOutlineFileText className="nav_icons" />Education</button>
+           <button className="buttons"><MdSchool className="nav_icons" />Education</button>
            </a>
-           </div>
            
-           <div className="links">
+           
+           
            <a
         href="/"
         onClick={e => {
@@ -102,9 +96,9 @@ export function Navbar() {
         >
            <button className="buttons"><GiFiles className="nav_icons" />Portfolio</button>
            </a>
-           </div>
            
-           <div className="links">
+           
+           
            <a
         href="/"
         onClick={e => {
@@ -117,9 +111,16 @@ export function Navbar() {
            <button className="buttons"><MdOutlineContactMail className="nav_icons" />Contact</button>
            </a>
            </div>
-           
-       
+           <button className="toggle" onClick={()=> setShowLinks(!showLinks)}><FaBars  className="bars"/></button>
+           <div className="social_icons">
+       <div className="social_links">
+       <a href="https://github.com/surbhimathur" target="_blank"> <VscGithub className="github" /> </a>
+       </div> 
+       <div className="social_links"> <a href="https://www.linkedin.com/in/surbhi-mathur-0958b71b5/" target="_blank">  <BsLinkedin className="linkedin" /> </a></div>
+       <div className="social_links"><a href="mailto:surbhimathur9@gmail.com"><SiGmail className="gmail" /></a></div>
+        </div>
       </div>
+      
     </div>
   );
 }

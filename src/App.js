@@ -14,15 +14,18 @@ function App() {
   return (
     <div className="App">
       <div className="main_page">
-      <BrowserRouter>
       <Navbar />
+      <BrowserRouter>
+      <div className="second_element">
       <Dashboard />
       <About />
       <Skills />
       <Education />
       <Portfolio />
       <Contact />
+      </div>
       </BrowserRouter>
+
         
         
       </div>
