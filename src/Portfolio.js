@@ -11,6 +11,7 @@ import slideshow from "../src/slide-show.jpg";
 
 export function Portfolio()
 {
+  /* projects list */
     const projects=[
     {
       name:"Search anime using API" ,
@@ -50,6 +51,7 @@ export function Portfolio()
 
 ];
     return(
+       /* portfolio design and code */
         <div className="portfolio_section" id="portfolio">
             <h2 className="skill_heading">Portfolio</h2>
             <div className="portfolio">
@@ -65,6 +67,7 @@ function Projectdetail({name,image,link})
  
 
     return(
+      /* project list */
         <div className="project" data-aos="flip-left" 
         data-aos-duration="1000" data-aos-easing="ease-in">
        

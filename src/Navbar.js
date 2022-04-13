@@ -14,6 +14,7 @@ import {SiGmail} from "react-icons/si";
 import { VscGithub } from "react-icons/vsc";
 
 export function Navbar() {
+  /* for smooth page scrolling */
   useEffect(() => {
     let url = window.location.href.split("/");
     let target = url[url.length - 1].toLowerCase();
@@ -24,11 +25,12 @@ export function Navbar() {
   const[showLinks,setShowLinks] =useState(false);
   
   return (
+    /* Navigation bar design and functionality */
     <div className="navbar">
-
       <div className="navigation_links" > 
       
-       <div className="links" id={showLinks ? "hidden" : ""}> 
+      {/* navigation links */}
+       <div className="links" id={showLinks ? "hidden" : ""}>   
        <a
         href="/"
         onClick={e => {

@@ -9,6 +9,7 @@
 body{
   font-family: 'Vollkorn', serif;
 }
+/* outer box*/
 .main_page
 {
  max-width:1500px;
@@ -16,6 +17,7 @@ body{
  display:flex;
  flex-direction:row;
 }
+/* navigation bar */
 .navbar{
   width:25%;
   background: #FF8008;  /* fallback for old browsers */
@@ -25,6 +27,7 @@ background: linear-gradient(to right, #FFC837, #FF8008); /* W3C, IE 10+/ Edge, F
   z-index:1000;
   
 }
+/* dashboard section */
 .second_element{
   width:75%;
   background-color:rgba(250, 245, 245, 0.707);

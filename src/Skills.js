@@ -1,5 +1,6 @@
 export function Skills() {
     return(
+        /* skills section */
         <div className="skills_section" id="skills">
         <h2 className="skill_heading">Skills</h2>
         <div className="skills_box">

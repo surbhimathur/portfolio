@@ -7,12 +7,14 @@ import Aos from "aos";
 import profilepic from "../src/profilepic.png";
 
 export function Dashboard(){
+  /*AOS animation library */
   useEffect(()=>{
     Aos.init({duration:2000});
   },[])
 
     
     return(
+      /* dashboard section */
   <div className="dashboard" id="dashboardd">
       <div className="hero_section">
           <div className="hero_heading">

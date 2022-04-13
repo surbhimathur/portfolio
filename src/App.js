@@ -13,7 +13,7 @@ import{Skills} from "./Skills.js";
 function App() {
   return (
     <div className="App">
-      <div className="main_page">
+      <div className="main_page">{/*main outer box */}
       <Navbar />
       <BrowserRouter>
       <div className="second_element">

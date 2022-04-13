@@ -3,11 +3,12 @@ import ed from "../src/ed.png";
 export function Education()
 {
     return(
+      /* education section */
         <section className="education_section" id="education">
 <h1 className="about_heading edu_heading">Education</h1>
+
       <div className="education" data-aos="zoom-in" data-aos-duration="1000" data-aos-easing="ease-in">
-  {/*<h1 className="about_heading edu_heading">Education</h1>*/}
-  
+  {/*education details section */}
   <div className="education_details" >
   <div className="mca">
   <p className="degree">Master Of Computer Applications (MCA)</p>
@@ -40,7 +41,7 @@ Internet Tools & Web Development.
 </p>
 </div>
   </div>
-
+{/* education image */}
   <div className="edu_image" >
     <img src={ed} />
   </div>

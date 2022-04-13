@@ -9,7 +9,7 @@ export function Contact()
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const [emailSent, setEmailSent] = useState(false);
-  
+  /* submit button functionality- sending name,email and message to my email address*/
     const submit = () => {
       if (name && email && message) {
          // TODO - send mail
@@ -21,7 +21,7 @@ export function Contact()
              email,
              message
          };
-
+           
          emailjs.send(serviceId, templateId, templateParams, userId)
              .then(response => console.log(response))
              .then(error => console.log(error));
@@ -33,19 +33,21 @@ export function Contact()
           alert('Please fill in all fields.');
       }
   }
-
+{/* checking for valid email id */}
   const isValidEmail = email => {
     const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return regex.test(String(email).toLowerCase());
 };
 
     return(
+    /*contact design and functionality */
         <div className="contact_section" id="contact">
+        {/*contact image div */}
 <div className="contact_image" data-aos="zoom-in-right" 
     data-aos-duration="1000">
     <img src={contact} />
 </div>
-
+{/*contact form div */}
 <div className="contact_details" data-aos="zoom-in-left" 
     data-aos-duration="1000" >
     <div className="contact">
