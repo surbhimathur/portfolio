@@ -425,6 +425,19 @@ width:100%;
   text-transform:uppercase;
   text-align:center;
 }
+.project_description{
+  border-bottom:1px solid grey;
+  margin-bottom:15px;
+  padding-bottom:10px;
+}
+.project_description p{
+  font-size:16px;
+  text-align:left;
+  text-transform:none;
+}
+#techstack{
+margin-top:5px;
+}
 .project_links{
 
   display:flex;
